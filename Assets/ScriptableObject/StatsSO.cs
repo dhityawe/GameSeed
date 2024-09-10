@@ -21,19 +21,22 @@ public class StatsSO : ScriptableObject
     public string effectDescription;
     public string description;
 
+    [Header("")]
+
+    [Header("Initial Stats")]
+    public float initialCost;
+    public float initialEffect;
+
     [Header("Stats")]
     public float cost;
     public float effect;
 
-    public void CostUpgrade()
+    public void StartInitialValues()
     {
-        cost *= 2;  // Double the cost
+        cost = initialCost;
+        effect = initialEffect;
     }
 
-    public void EffectUpgrade()
-    {
-        effect *= 2;  // Double the effect
-    }
 }
 
 // Move the enums outside of the class so Unity can serialize them
@@ -45,7 +48,6 @@ public enum CategoryType
 
 public enum EvolutionEffect
 {
-    
     Tap,
     Passive,
     Effective

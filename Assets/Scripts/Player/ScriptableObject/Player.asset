@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2a3e37e1eb85f74f9b071d31f6358e5, type: 3}
+  m_Name: Player
+  m_EditorClassIdentifier: 
+  initialMoney: 0
+  initialPassiveIncomePerSecond: 0
+  initialTapIncome: 1
+  currentMoney: 63.880936
+  currentPassiveIncomePerSecond: 10
+  currentPassiveIncomePerSecondMultiplier: 0
+  currentTapIncome: 1
+  currentTapIncomeMultiplier: 0
+  tapIncomePrefabText: {fileID: 5105873860712064094, guid: 78ce70b4ce4169043a0354231b7981db, type: 3}

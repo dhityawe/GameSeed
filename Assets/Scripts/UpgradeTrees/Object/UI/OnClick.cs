@@ -6,10 +6,19 @@ public class OnClick : MonoBehaviour
 {
     public bool isHighlighted;
 
+    [Header("Scriptable Object References")]
+    public IncomeBase incomeBase;
     public StatsSO statsSO;
+    public PlayerStatsSO playerStatsSO;
 
     void Start()
     {
+        // Find the IncomeBase script in the scene
+        incomeBase = FindObjectOfType<IncomeBase>();
+        playerStatsSO = FindObjectOfType<PlayerStatsSO>();
+
+        statsSO.StartInitialValues();
+
         isHighlighted = false;
     }
 
@@ -17,7 +26,7 @@ public class OnClick : MonoBehaviour
     {
         if (isHighlighted)
         {
-            statsSO.CostUpgrade();
+    
             Debug.Log("Upgrading cost");
         }
         else

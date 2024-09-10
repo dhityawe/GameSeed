@@ -15,10 +15,12 @@ MonoBehaviour:
   model2D: {fileID: 0}
   model3D: {fileID: 0}
   material3D: {fileID: 0}
-  categoryType: 1
-  evolutionEffect: 1
+  categoryType: 0
+  evolutionEffect: 0
   name: DNA
   effectDescription: 
   description: 
-  cost: 0
-  effect: 0
+  initialCost: 10
+  initialEffect: 50
+  cost: 2621440
+  effect: 13107200
