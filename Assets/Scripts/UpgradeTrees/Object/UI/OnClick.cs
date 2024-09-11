@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class OnClick : MonoBehaviour
+public class OnClick : MonoBehaviour, IPointerClickHandler
 {
     public bool isHighlighted;
 
@@ -22,8 +23,10 @@ public class OnClick : MonoBehaviour
         isHighlighted = false;
     }
 
-    public void OnClickButton()
+    public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log("Mouse Clicked on the Object");
+        
         if (isHighlighted)
         {
     

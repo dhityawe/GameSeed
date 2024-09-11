@@ -10,15 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a66fa6b5012fe247bd103b71d4abe7b, type: 3}
-  m_Name: Memek
+  m_Name: RNA
   m_EditorClassIdentifier: 
   model2D: {fileID: 0}
   model3D: {fileID: 0}
   material3D: {fileID: 0}
   categoryType: 0
   evolutionEffect: 1
-  name: 
+  name: RNA
   effectDescription: 
   description: 
+  initialCost: 0
+  initialEffect: 0
   cost: 0
   effect: 0

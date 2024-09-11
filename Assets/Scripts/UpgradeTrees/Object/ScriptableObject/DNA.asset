@@ -18,9 +18,9 @@ MonoBehaviour:
   categoryType: 0
   evolutionEffect: 0
   name: DNA
-  effectDescription: 
+  effectDescription: ini galang tolol
   description: 
   initialCost: 10
   initialEffect: 50
-  cost: 2621440
-  effect: 13107200
+  cost: 10
+  effect: 50
