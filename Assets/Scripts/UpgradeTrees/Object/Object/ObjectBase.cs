@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -8,8 +7,9 @@ public class ObjectBase : MonoBehaviour
     public TextMeshPro title;
     public TextMeshPro cost;
 
-    // Reference script
+    // Reference to OnClick
     private OnClick onClick;
+    private PlayerStatsSO playerStatsSO;
 
     // Start is called before the first frame update
     void Start()
@@ -17,21 +17,23 @@ public class ObjectBase : MonoBehaviour
         // Get OnClick component from the same GameObject
         onClick = GetComponent<OnClick>();
 
-        // Get the statsSO from OnClick script
-        if (onClick != null)
+        // Get the PlayerStatsSO from the scene
+        playerStatsSO = FindObjectOfType<PlayerStatsSO>();
+
+        // Use StatsSO from OnClick instead of GetComponent
+        if (onClick != null && onClick.statsSO != null)
         {
-            Initialize(onClick.statsSO);
+            Initialize(onClick.statsSO); // Pass StatsSO from OnClick to Initialize
         }
         else
         {
-            Debug.LogError("OnClick script not found!");
+            Debug.LogError("OnClick script or StatsSO is missing!");
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-
+        UpdateCurrentData();
     }
 
     public void Initialize(StatsSO statsSO)
@@ -45,5 +47,10 @@ public class ObjectBase : MonoBehaviour
         {
             Debug.LogError("StatsSO is null!");
         }
+    }
+
+    public void UpdateCurrentData()
+    {
+        cost.text = onClick.statsSO.cost.ToString();
     }
 }

@@ -5,10 +5,16 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "StatsSO", menuName = "ScriptableObjects/StatsSO", order = 2)]
 public class StatsSO : ScriptableObject
 {
-    [Header("Asset Reference 2D")]
+    [Header("Background Reference")]
+    public Material bgBorderNotEnoughMoney;
+    public Material bgBorderEnoughMoney;
+    public Material bgBorderIsHighlighted;
+    public Material backgroundModel;
+
+    [Header("Evolution Reference 2D")]
     public Sprite model2D;
 
-    [Header("Asset Reference 3D")]
+    [Header("Life Model Display Reference 3D")]
     public Mesh model3D;
     public Material material3D;
 
@@ -21,20 +27,23 @@ public class StatsSO : ScriptableObject
     public string effectDescription;
     public string description;
 
-    [Header("")]
 
     [Header("Initial Stats")]
     public float initialCost;
     public float initialEffect;
+    public float initialLevel;
 
     [Header("Stats")]
     public float cost;
     public float effect;
+    public float upgradeLevel;
+    public float upgradeLimit;
 
     public void StartInitialValues()
     {
         cost = initialCost;
         effect = initialEffect;
+        upgradeLevel = initialLevel;
     }
 
 }

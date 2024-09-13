@@ -15,7 +15,7 @@ public class PlayerStatsSO : ScriptableObject
 
     [Header("Player Passive Income")]
     public float currentPassiveIncomePerSecond;
-    public float currentPassiveIncomePerSecondMultiplier;
+    public float currentPassiveIncomePerSecondMultiplier;   
 
     [Header("Player Tap Income")]
     public float currentTapIncome; // Holds the current tap income

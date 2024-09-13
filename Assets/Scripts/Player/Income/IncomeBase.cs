@@ -46,7 +46,7 @@ public class IncomeBase : MonoBehaviour
     {
         // Increase the player's money by the passive income amount
         playerStatsSO.currentMoney += playerStatsSO.currentPassiveIncomePerSecond * Time.deltaTime;
-        moneyText.text = playerStatsSO.currentMoney.ToString("F0");
+        passiveIncomeText.text = playerStatsSO.currentPassiveIncomePerSecond.ToString("F0");
     }
 
 

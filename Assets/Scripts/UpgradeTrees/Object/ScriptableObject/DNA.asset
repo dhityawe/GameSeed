@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a66fa6b5012fe247bd103b71d4abe7b, type: 3}
   m_Name: DNA
   m_EditorClassIdentifier: 
+  bgBorderNotEnoughMoney: {fileID: 2100000, guid: 9b0def66076160544b5f1e0b78ccc5e3, type: 2}
+  bgBorderEnoughMoney: {fileID: 2100000, guid: ec8982ba39da22141ae5f218605abac7, type: 2}
+  bgBorderIsHighlighted: {fileID: 2100000, guid: 6cc593ce6992c344caba49ccfbafbbb0, type: 2}
+  backgroundModel: {fileID: 0}
   model2D: {fileID: 0}
   model3D: {fileID: 0}
   material3D: {fileID: 0}
@@ -20,7 +24,10 @@ MonoBehaviour:
   name: DNA
   effectDescription: ini galang tolol
   description: 
-  initialCost: 10
-  initialEffect: 50
-  cost: 10
-  effect: 50
+  initialCost: 5
+  initialEffect: 1
+  initialLevel: 0
+  cost: 5
+  effect: 1
+  upgradeLevel: 0
+  upgradeLimit: 60
